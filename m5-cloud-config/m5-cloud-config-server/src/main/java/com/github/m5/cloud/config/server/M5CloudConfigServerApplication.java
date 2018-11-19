@@ -11,6 +11,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 @SpringBootApplication
 public class M5CloudConfigServerApplication {
 
+
     public static void main(String[] args) {
         SpringApplication.run(M5CloudConfigServerApplication.class, args);
     }

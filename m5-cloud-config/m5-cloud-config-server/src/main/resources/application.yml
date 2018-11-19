@@ -3,4 +3,6 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/mars05/spring-cloud-study/tree/master/m5-cloud-config
+          uri: https://github.com/mars05/spring-cloud-study
+#          search-paths: /tree/master/m5-cloud-config/m5-cloud-config-server/config-repo
+          default-label: master

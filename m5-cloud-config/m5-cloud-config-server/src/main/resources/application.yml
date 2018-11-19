@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/mars05/spring-cloud-study/tree/master/m5-cloud-config

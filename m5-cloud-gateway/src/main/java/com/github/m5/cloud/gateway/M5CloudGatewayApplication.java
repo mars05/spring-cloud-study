@@ -18,7 +18,7 @@ import static org.springframework.cloud.gateway.support.ServerWebExchangeUtils.G
 public class M5CloudGatewayApplication {
 
     @Bean
-     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
+    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route("m5-config-1", predicateSpec -> predicateSpec.host("www.m5.com")
                         .and().weight("m5-config", 1)

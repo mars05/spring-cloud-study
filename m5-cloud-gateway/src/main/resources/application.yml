@@ -1,8 +1,10 @@
-spring:
-  cloud:
-    gateway:
-      routes:
-      - id: after_route
-        uri: http://example.org
-        predicates:
-        - After=2017-01-20T17:42:47.789-07:00[America/Denver]
+server:
+  port: 80
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#      - id: m5-config-1
+#        uri: http://127.0.0.1:9090
+#        predicates:
+#        - Host=*.m5.com

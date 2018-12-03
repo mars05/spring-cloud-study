@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -18,6 +20,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author xiaoyu
  */
 @RestController
+@EnableCaching
 @SpringBootApplication
 public class M5CloudConfigClientApplication {
     private long lastModified = System.currentTimeMillis();
@@ -26,7 +29,9 @@ public class M5CloudConfigClientApplication {
     AtomicInteger i = new AtomicInteger();
 
     @RequestMapping("/abc")
+    @Cacheable(value = "test", sync = true)
     public String abc() {
+        System.out.println("===abc===");
         return "abc";
     }
 

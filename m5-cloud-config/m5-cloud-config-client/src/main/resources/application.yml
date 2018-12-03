@@ -1,0 +1,6 @@
+spring:
+  cache:
+    cache-names: test
+    caffeine:
+      spec: initialCapacity=50,maximumSize=500,expireAfterWrite=5s,refreshAfterWrite=7s
+    type: simple

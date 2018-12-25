@@ -1,0 +1,49 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "full_word": {
+          "type": "pattern",
+          "pattern": "",
+          "lowercase": true
+        }
+      }
+    }
+  },
+  "mappings": {
+    "doc": {
+      "properties": {
+        "stockCode": {
+          "type": "text",
+          "analyzer": "full_word",
+          "search_analyzer": "full_word",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "stockName": {
+          "type": "text",
+          "analyzer": "full_word",
+          "search_analyzer": "full_word",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "listingDate": {
+          "index": false,
+          "type": "date"
+        },
+        "companyName": {
+          "index": false,
+          "type": "text"
+        }
+      }
+    }
+  }
+}

@@ -4,3 +4,10 @@ spring:
     caffeine:
       spec: initialCapacity=50,maximumSize=500,expireAfterWrite=5s,refreshAfterWrite=7s
     type: simple
+  data:
+    elasticsearch:
+      cluster-nodes: 10.1.7.31:9300,10.1.7.32:9300
+      cluster-name: elk-test
+  elasticsearch:
+    rest:
+      uris: ["http://10.1.7.31:9200","http://10.1.7.32:9200"]
